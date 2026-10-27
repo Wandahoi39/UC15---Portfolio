@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinícius Macêdo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="menu">
+    <span class="menu-logo" id="logo">&lt;Dev/&gt;</span>
+    <nav class="menu-nav" id="menu-nav">
+      <a href="#hero" class="menu-link">Início</a>
+      <a href="#projetos" class="menu-link">Projetos</a>
+      <a href="#habilidades" class="menu-link">Habilidades</a>
+      <a href="#sobre" class="menu-link">Sobre</a>
+      <a href="#contato" class="menu-link">Contato</a>
+    </nav>
+
+    <div class="menu-acoes">
+      <button id="btn-tema" aria-label="Alternar tema claro e escuro" class="btn-icone">
+        <img src="img/luapixel.png" alt="Tema Escuro" id="icone-tema">
+      </button>
+      <button id="btn-menu" aria-label="Abrir Menu" aria-expanded="false" aria-controls="menu-nav">
+        <img src="img/menuescuro.png" alt="" id="icone-menu">
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <!-- Texto à esquerda no PC -->
+        <div class="hero-conteudo">
+          <h1 id="titulo">Bom dia, sou Vinícius</h1>
+          <p class="hero-texto" id="subtitulo">Eu sou um estudante de informática no SENAC que quer ser um desenvolvedor full-stack!</p>
+          <a href="#projetos" class="btn-hero" id="btn-hero">Ver meus projetos</a>
+        </div>
+        <!-- Foto real à direita no PC -->
+        <div class="hero-avatar-wrap">
+          <img src="img/pixelme.png" alt="Menino de pele negra em pixel art, camisa branca e short azul." id="avatar-pixel" class="hero-foto">
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="projetos">
+      <h2 class="secao-titulo">Projetos</h2>
+      <div class="grade">
+        <article class="projeto-card" id="card-1">
+          <img src="img/print-tabela.png" alt="Tabela Periódica para Deficientes Visuais" class="card-imagem">
+          <h3>Tabela Periódica para pessoas com deficiência visual</h3>
+          <p>Projeto em conjunto com Química para Deficientes Visuais.</p>
+          <p class="card-tech">HTML · CSS · JavaScript</p>
+          <a href="https://wandahoi39.github.io/UC---Trabalho-de-Quimica/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Tabela química para pessoas com deficiência visual.">Ver projeto</a>
+        </article>
+        <article class="projeto-card" id="card-2">
+          <img src="img/print-fotografia.png" alt="Site de Fotografia" class="card-imagem">
+          <h3>Site de Fotografia</h3>
+          <p>Projeto em dupla como trabalho para criar uma empresa.</p>
+          <p class="card-tech">HTML · CSS</p>
+          <a href="https://wandahoi39.github.io/UC14---Trabalho-Dupla/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Projeto de turma paracriar uma empresa fictícia">Ver projeto</a>
+        </article>
+        <article class="projeto-card" id="card-3">
+          <img src="img/print-economia.png" alt="Site sobre Economia" class="card-imagem">
+          <h3>Site sobre Economia</h3>
+          <p>Projeto em grupo em conjunto com a feira de ciências escolar.</p>
+          <p class="card-tech">HTML · CSS · JavaScript</p>
+          <a href="https://wandahoi39.github.io/UC...-Feira-de-Ciencias/" target="_blank" rel="noopener noreferrer" class="card-link" aria-label="Projeto de feira de ciências escolar.">Ver projeto</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="secao" id="habilidades">
+      <h2 class="secao-titulo">Habilidades</h2>
+      <div class="skills-wrap" id="skills-wrap">
+        <span class="skill-tag">HTML5 — Confortável</span>
+        <span class="skill-tag">CSS3 — Praticando</span>
+        <span class="skill-tag">JavaScript — Iniciante</span>
+      </div>
+    </section>
+
+    <section class="secao" id="sobre">
+      <h2 class="secao-titulo">Sobre mim</h2>
+      <div class="sobre-container">
+        <img src="img/waving-heart.gif" alt="" id="avatar-pixel-coracao">
+        <p id="texto-sobre">Olá! Me chamo Vinícius Rodrigues de Macêdo, tenho 16 anos e sou estudante de Técnico de Desenvolvimento de Sistemas no SENAC MedTec. Meu objetivo é me tornar um desenvolvedor full-stack especializado em criar experiências web inovadoras e acessíveis para todos. </p>
+        <p>Desde cedo, sempre fui fascinado por tecnologia e programação. Quando criança sempre fui essa pessoa que sabia de tudo na internet, e quero ser uma pessoa assim na minha profissão, ser um profissional qualificado. Estou constantemente buscando aprender novas tecnologias e aprimorar minhas habilidades para me manter atualizado com as tendências do setor.
+        </p>
+      </div>
+    </section>
+
+    <section class="secao" id="contato">
+      <h2 class="secao-titulo">Contato</h2>
+      <p id="texto-contato">Entre em contato comigo caso tenha se interessado por algum dos meus projetos, estou sempre a disposição!</p>
+<br>
+      <form id="form-contato" novalidate>
+        <label for="nome">Nome:</label>
+        <br>
+        <input type="text" id="nome" name="nome">
+        <span class="erro-msg" id="erro-nome"></span>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" id="email" name="email">
+        <span class="erro-msg" id="erro-email"></span>
+        <br><br>
+
+        <label for="mensagem">Mensagem (mínimo de 20 caracteres):</label>
+        <br>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+        <span class="erro-msg" id="erro-mensagem"></span>
+        <br><br>
+
+        <div class="grupo-checkbox">
+          <input type="checkbox" id="consentimento">
+          <label for="consentimento">Eu concordo que meus dados sejam utilizados para contato profissional.</label>
+          <span class="erro-msg" id="erro-consentimento"></span>
+        </div>
+        <p class="aviso-lgpd">Seus dados são tratados em conformidade com a LGPD apenas para fins de contato profissional.</p>
+        <br><br>
+
+        <button type="submit">Enviar</button>
+        <div id="sucesso-mensagem" class="sucesso-msg"></div>
+      </form>
+      <br>
+      <a href="https://github.com/Wandahoi39" target="_blank" rel="noopener noreferrer">
+        <img src="img/github-branco.svg" alt="Ícone do GitHub" class="icone-github">
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="ano-atual"></span> Vinícius Macêdo. Todos os direitos reservados.</p>
+    <a href="#hero" class="voltar-topo">Voltar ao topo ↑</a>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
