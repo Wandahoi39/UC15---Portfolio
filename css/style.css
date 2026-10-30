@@ -337,19 +337,21 @@ h1 {
 
 /* A barra grande dividida em 4 segmentos */
 .skill-barra-categoria {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
+  display: flex;
+  width: 100%;
+  gap: 6px;
   background: var(--input-bg);
   border: 3px solid var(--borda);
-  padding: 4px;
+  padding: 6px;
   border-radius: 4px;
   box-shadow: var(--sombra-8bit);
 }
 
 /* Cada um dos 4 blocos da divisão */
 .bloco {
-  height: 16px;
+  flex: 1;
+  height: 20px;
+  min-height: 20px; 
   background: transparent;
   border-radius: 2px;
   transition: background 0.3s ease;
@@ -358,7 +360,7 @@ h1 {
 /* Quando a categoria está ativa/preenchida, usa a cor primária do teu tema */
 .bloco.ativo {
   background: var(--primaria);
-  box-shadow: inset -2px -2px 0px var(--borda), inset 2px 2px 0px var(--borda);
+  box-shadow: inset -2px -2px 0px var(--borda);
 }
 
 #sobre p { 
