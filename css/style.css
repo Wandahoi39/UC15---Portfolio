@@ -305,21 +305,60 @@ h1 {
   color: var(--suave); 
 }
 
-/* Habilidades */
-.skills-wrap { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 8px; 
+/* Habilidades - Barras Divididas em 4 Categorias (Usando variáveis do Root) */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.skill-tag {
-  font-size: 0.82rem;
-  padding: 6px 12px;
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.skill-nome {
+  font-weight: bold;
+  color: var(--texto);
+}
+
+.skill-nivel {
+  font-size: 0.8rem;
+  color: var(--suave);
+}
+
+/* A barra grande dividida em 4 segmentos */
+.skill-barra-categoria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  background: var(--input-bg);
+  border: 3px solid var(--borda);
+  padding: 4px;
   border-radius: 4px;
-  border: 2px solid var(--primaria);
-  color: var(--primaria);
-  background: var(--card-bg);
-  box-shadow: 2px 2px 0px var(--borda);
+  box-shadow: var(--sombra-8bit);
+}
+
+/* Cada um dos 4 blocos da divisão */
+.bloco {
+  height: 16px;
+  background: transparent;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+/* Quando a categoria está ativa/preenchida, usa a cor primária do teu tema */
+.bloco.ativo {
+  background: var(--primaria);
+  box-shadow: inset -2px -2px 0px var(--borda), inset 2px 2px 0px var(--borda);
 }
 
 #sobre p { 
@@ -328,75 +367,61 @@ h1 {
   line-height: 1.7;
 }
 
-/* Formulário e Contato */
-form input:not([type="checkbox"]), form textarea  {
-  width: 100%;
-  padding: 10px;
-  background: var(--input-bg);
-  border: 2px solid var(--borda);
-  border-radius: 4px;
+/* Estilos para as barras de contato direto */
+.contato-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.contato-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card-bg);
+  border: 3px solid var(--borda);
+  border-radius: 6px;
+  padding: 14px 18px;
+  text-decoration: none;
   color: var(--texto);
-  font-family: var(--fontepequena);
-  margin-top: 4px;
-  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.2);
-  transition: border-color 0.2s ease;
-}
-
-form input:focus:not([type="checkbox"]), form textarea:focus {
-  border-color: var(--primaria);
-  outline: 3px solid var(--primaria);
-  outline-offset: 1px;
-}
-
-form button[type="submit"] {
-  padding: 12px 24px;
-  background: var(--primaria);
-  color: #fff;
-  border: 2px solid var(--borda);
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
   box-shadow: var(--sombra-8bit);
-  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, border-color 0.2s ease;
 }
 
-form button[type="submit"]:hover {
+.contato-card:hover {
   transform: translate(-2px, -2px);
+  border-color: var(--primaria);
   box-shadow: 6px 6px 0px #000;
 }
 
-form button[type="submit"]:focus-visible {
-  outline: 3px solid var(--primaria);
-  outline-offset: 2px;
-}
-
-.grupo-checkbox {
+.contato-icone {
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
 }
 
-.aviso-lgpd {
-  font-size: 0.75rem;
-  color: var(--suave);
-  margin-top: 6px;
+.icone-github-card {
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
 }
 
-.erro-msg {
-  color: var(--erro);
-  font-size: 0.82rem;
-  display: block;
-  margin-top: 4px;
+.contato-info {
+  display: flex;
+  flex-direction: column;
 }
 
-.sucesso-msg {
-  color: var(--sucesso);
+.contato-info strong {
   font-size: 0.95rem;
-  font-weight: bold;
-  padding: 8px;
-  border: 2px solid var(--sucesso);
-  border-radius: 4px;
-  background: var(--card-bg);
+  color: var(--primaria);
+  margin-bottom: 2px;
+}
+
+.contato-info span {
+  font-size: 0.85rem;
+  color: var(--suave);
 }
 
 /* Rodapé */
