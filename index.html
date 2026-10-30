@@ -71,12 +71,52 @@
       </div>
     </section>
 
-    <section class="secao" id="habilidades">
+<section class="secao" id="habilidades">
       <h2 class="secao-titulo">Habilidades</h2>
-      <div class="skills-wrap" id="skills-wrap">
-        <span class="skill-tag">HTML5 — Confortável</span>
-        <span class="skill-tag">CSS3 — Praticando</span>
-        <span class="skill-tag">JavaScript — Iniciante</span>
+      <div class="skills-container">
+
+        <!-- Habilidade 1: HTML5 (3 de 4 - Confortável) -->
+        <div class="skill-item">
+          <div class="skill-head">
+            <span class="skill-nome">HTML5</span>
+            <span class="skill-nivel">Intermediário (3/4)</span>
+          </div>
+          <div class="skill-barra-categoria">
+            <div class="bloco ativo"></div>
+            <div class="bloco ativo"></div>
+            <div class="bloco ativo"></div>
+            <div class="bloco"></div>
+          </div>
+        </div>
+
+        <!-- Habilidade 2: CSS3 (2 de 4 - Praticando) -->
+        <div class="skill-item">
+          <div class="skill-head">
+            <span class="skill-nome">CSS3</span>
+            <span class="skill-nivel">Em desenvolvimento (2/4)</span>
+          </div>
+          <div class="skill-barra-categoria">
+            <div class="bloco ativo"></div>
+            <div class="bloco ativo"></div>
+            <div class="bloco"></div>
+            <div class="bloco"></div>
+          </div>
+        </div>
+
+        <!-- Habilidade 3: JavaScript (1 de 4 - Iniciante) -->
+        <div class="skill-item">
+          <div class="skill-head">
+            <span class="skill-nome">JavaScript</span>
+            <span class="skill-nivel">Básico (1/4)</span>
+          </div>
+          <div class="skill-barra-categoria">
+            <div class="bloco ativo"></div>
+            <div class="bloco"></div>
+            <div class="bloco"></div>
+            <div class="bloco"></div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -85,49 +125,43 @@
       <div class="sobre-container">
         <img src="img/waving-heart.gif" alt="" id="avatar-pixel-coracao">
         <p id="texto-sobre">Olá! Me chamo Vinícius Rodrigues de Macêdo, tenho 16 anos e sou estudante de Técnico de Desenvolvimento de Sistemas no SENAC MedTec. Meu objetivo é me tornar um desenvolvedor full-stack especializado em criar experiências web inovadoras e acessíveis para todos. </p>
-        <p>Desde cedo, sempre fui fascinado por tecnologia e programação. Quando criança sempre fui essa pessoa que sabia de tudo na internet, e quero ser uma pessoa assim na minha profissão, ser um profissional qualificado. Estou constantemente buscando aprender coisas novas e aprimorar minhas habilidades para me manter atualizado com as novidades do ramo.
+        <p>Desde cedo, sempre fui fascinado por tecnologia e programação. Quando criança sempre fui essa pessoa que sabia de tudo na internet, e quero ser uma pessoa assim na minha profissão, ser um profissional qualificado. Estou constantemente buscando aprender novas tecnologias e aprimorar minhas habilidades para me manter atualizado com as tendências do setor.
         </p>
       </div>
     </section>
 
-    <section class="secao" id="contato">
+<section class="secao" id="contato">
       <h2 class="secao-titulo">Contato</h2>
-      <p id="texto-contato">Entre em contato comigo caso tenha se interessado por algum dos meus projetos, estou sempre a disposição!</p>
-<br>
-      <form id="form-contato" novalidate>
-        <label for="nome">Nome:</label>
-        <br>
-        <input type="text" id="nome" name="nome">
-        <span class="erro-msg" id="erro-nome"></span>
-        <br><br>
+      <p id="texto-contato">Gostou dos meus projetos ou querer falar comigo? Pode me contatar através dos links abaixo:</p>
+      
+      <div class="contato-container">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5584994660529" target="_blank" rel="noopener noreferrer" class="contato-card">
+          <span class="contato-icone">💬</span>
+          <div class="contato-info">
+            <strong>WhatsApp</strong>
+            <span>(84) 99466-0529</span>
+          </div>
+        </a>
 
-        <label for="email">Email:</label>
-        <br>
-        <input type="email" id="email" name="email">
-        <span class="erro-msg" id="erro-email"></span>
-        <br><br>
+        <!-- E-mail -->
+        <a href="mailto:rmvinicius1@gmail.com" class="contato-card">
+          <span class="contato-icone">✉️</span>
+          <div class="contato-info">
+            <strong>E-mail</strong>
+            <span>rmvinicius1@gmail.com</span>
+          </div>
+        </a>
 
-        <label for="mensagem">Mensagem (mínimo de 20 caracteres):</label>
-        <br>
-        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
-        <span class="erro-msg" id="erro-mensagem"></span>
-        <br><br>
-
-        <div class="grupo-checkbox">
-          <input type="checkbox" id="consentimento">
-          <label for="consentimento">Eu concordo que meus dados sejam utilizados para contato profissional.</label>
-          <span class="erro-msg" id="erro-consentimento"></span>
-        </div>
-        <p class="aviso-lgpd">Seus dados são tratados em conformidade com a LGPD apenas para fins de contato profissional.</p>
-        <br><br>
-
-        <button type="submit">Enviar</button>
-        <div id="sucesso-mensagem" class="sucesso-msg"></div>
-      </form>
-      <br>
-      <a href="https://github.com/Wandahoi39" target="_blank" rel="noopener noreferrer">
-        <img src="img/github-branco.svg" alt="Ícone do GitHub" class="icone-github">
-      </a>
+        <!-- GitHub -->
+        <a href="https://github.com/Wandahoi39" target="_blank" rel="noopener noreferrer" class="contato-card">
+          <img src="img/github-branco.svg" alt="Ícone do GitHub" class="icone-github-card">
+          <div class="contato-info">
+            <strong>GitHub</strong>
+            <span>Wandahoi39</span>
+          </div>
+        </a>
+      </div>
     </section>
   </main>
 
